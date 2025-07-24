@@ -15,7 +15,6 @@ const Activities = () => {
       {/* <ActivitiesCard /> */}
       <EmptyState
         icon="/svg/activte.svg"
-        message="No activities found. Add a new one to get started!"
         buttonLabel="Add Activity"
         onButtonClick={() => alert("Add new activity")}
         className="min-h-[300px]"
