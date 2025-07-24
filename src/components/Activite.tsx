@@ -1,4 +1,3 @@
-import React from "react";
 import Title from "./common/Title";
 // import ActivitiesCard from "./common/ActivitesCard";
 import { PiRoadHorizonLight } from "react-icons/pi";

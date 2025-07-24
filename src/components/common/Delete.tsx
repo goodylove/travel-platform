@@ -1,5 +1,3 @@
-import React from "react";
-
 function Delete() {
   return (
     <div className="bg-[#FBEAE9] text-[#9E0A05] flex items-center  justify-center w-full md:w-[46px] cursor-pointer">

@@ -1,4 +1,3 @@
-import React from "react";
 import Banner from "../assets/image/banner.png";
 
 import { FaArrowLeft } from "react-icons/fa";

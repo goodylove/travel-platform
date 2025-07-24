@@ -1,4 +1,3 @@
-import React from "react";
 import Title from "./common/Title";
 import FlightCard from "./common/flightCard";
 import { PiAirplaneInFlightDuotone } from "react-icons/pi";
