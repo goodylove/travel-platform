@@ -9,14 +9,29 @@ import {
 import DetailsBtn from "./DetailsBtn";
 import Delete from "./Delete";
 
-function HotelCard() {
+export interface HotelCardData {
+  image_url?: string | undefined;
+  country?: string | undefined;
+  name?: string | undefined;
+  label?: string | undefined;
+}
+interface HotelCardProps {
+  hotel: HotelCardData;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  onSelect?: (value: any) => void;
+}
+
+function HotelCard(props: HotelCardProps) {
   return (
-    <div className="flex md:flex-row flex-col">
+    <div
+      className="flex md:flex-row flex-col my-3"
+      onClick={() => props.onSelect?.(props.hotel)}
+    >
       <div className=" flex-1 bg-white  rounded-t-sm rounded-l-sm rounded-r-none p-1 lg:p-2 xl:p-3 w-full">
         <div className="flex flex-col md:flex-row md:space-x-2 xl:space-x-4 w-full">
           {/* img */}
           <img
-            src="/svg/3.svg"
+            src={props.hotel.image_url || "/svg/3.svg"}
             alt="hotel"
             className="w-full md:w-[160px] xl:w-[200px] object-cover rounded-sm mb-3 md:mb-0"
           />
@@ -26,11 +41,10 @@ function HotelCard() {
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
               <div>
                 <p className="text-[#000000] text-xl font-poppins font-semibold">
-                  Riviera Resort, Lekki
+                  {props.hotel.name}
                 </p>
                 <p className="text-[#1D2433] font-poppins text-sm xl:text-sm font-medium">
-                  18, Kenneth Agbakuru Street, Off Access Bank Admiralty Way,
-                  Lekki Phase1
+                  {props.hotel.label}
                 </p>
                 <div className="font-medium flex flex-wrap gap-3 mt-2">
                   <div className="text-[#0D6EFD] flex items-center space-x-1">

@@ -13,7 +13,7 @@ import SidebarItem from "./common/siderbarItem";
 
 function Sidebar() {
   return (
-    <div className=" transform transition-transform duration-300 w-full  bg-white shadow-md rounded-sm px-7 py-4 space-y-6 ">
+    <div className=" transform transition-transform duration-300 w-full   bg-white shadow-md rounded-sm px-7 py-6   ">
       <SidebarItem Icon={PiRoadHorizonLight} label="Activities" />
       <SidebarItem Icon={PiBuildings} label="Hotels" />
       <SidebarItem Icon={PiAirplaneTilt} label="Flights" />

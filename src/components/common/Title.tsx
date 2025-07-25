@@ -6,6 +6,7 @@ interface TitleProps {
   buttonTextColor?: string;
   title: string;
   Icon: IconType;
+  onClick: () => void;
 }
 
 function Title({
@@ -13,6 +14,7 @@ function Title({
   buttonTextColor = "text-white",
   title,
   Icon,
+  onClick,
 }: TitleProps) {
   return (
     <div className="flex items-center justify-between mb-4">
@@ -28,7 +30,8 @@ function Title({
         </span>
       </div>
       <Button
-        className={` font-poppins  hover:brightness-110 transition-colors duration-200 border-none ${buttonColor} ${buttonTextColor} `}
+        onClick={onClick}
+        className={` font-poppins  px-5 hover:brightness-110 transition-colors duration-200 border-none ${buttonColor} ${buttonTextColor} `}
       >
         Add {title}
       </Button>
