@@ -63,7 +63,7 @@ function Hotel({ hotelModal, setHotelModal }: HotelProps) {
       </div>
       {hotelModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm transition-opacity duration-300 ">
-          <div className="relative w-full max-w-2xl h-[80vh] bg-white overflow-y-scroll rounded-xl shadow-lg p-6 animate-fade-in scale-95 transition-all duration-300 ease-in-out">
+          <div className="relative w-full max-w-3xl h-[80vh] bg-white overflow-y-scroll rounded-xl shadow-lg p-6 animate-fade-in scale-95 transition-all duration-300 ease-in-out">
             <button
               className="absolute top-4 right-4 text-[#0D6EFD] text-2xl font-bold hover:text-[#0B5ED7] transition-colors"
               onClick={() => handleOnClose}
