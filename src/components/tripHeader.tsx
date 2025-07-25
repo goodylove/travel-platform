@@ -8,7 +8,7 @@ import {
 import Profile from "../assets/image/1.png";
 function TripHeader() {
   return (
-    <div className="flex md:items-center md:justify-between md:flex-row  flex-col mt-5 space-y-2 ">
+    <div className="flex md:items-center md:justify-between md:flex-row  flex-col my-5 space-y-2 ">
       {/* left */}
       <div>
         <div className="flex items-center text-xs  font-poppins justify-center w-fit space-x-1 bg-[#FEF4E6] text-[#7A4504]  px-1.5 py-1.5 rounded-sm">

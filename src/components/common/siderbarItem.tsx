@@ -8,13 +8,13 @@ interface SidebarItemProps {
 
 const SidebarItem: React.FC<SidebarItemProps> = ({ Icon, label }) => (
   <div
-    className={`flex  text-base font-medium  font-poppins items-center space-x-3 cursor-pointer group hover:text-[#1D2433] transition-colors`}
+    className={`flex  text-base font-medium my-6 font-poppins items-center space-x-3 cursor-pointer group hover:text-[#1D2433] transition-colors`}
   >
     <Icon
       className={`icon group-hover:text-[#1D2433] transition-colors text-[#647995]`}
       size={30}
     />
-    <span className="font-medium text-[#647995] group-hover:text-[#1D2433]">
+    <span className="font-medium text-base text-[#647995] group-hover:text-[#1D2433]">
       {label}
     </span>
   </div>

@@ -8,25 +8,41 @@ import {
 import Delete from "./Delete";
 import DetailsBtn from "./DetailsBtn";
 
-function FlightCard() {
+export interface Flight {
+  photoUri: string;
+  name?: string;
+}
+interface FlightCardProps {
+  flight: Flight;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  onSelect?: (value: any) => void;
+}
+
+function FlightCard(props: FlightCardProps) {
   return (
-    <div className="bg-white rounded-sm   shadow-md space-y-4 w-full flex md:flex-row flex-col">
+    <div
+      onClick={() => props.onSelect?.(props.flight)}
+      className="bg-white rounded-sm my-3  shadow-md space-y-4 w-full flex md:flex-row flex-col"
+    >
       <div className="flex-1 pt-3 px-2 space-y-5">
         <div className=" flex flex-col gap-4 lg:space-x-2 xl:space-x-8 md:flex-row md:items-center md:justify-between px-2 xl:px-3">
           {/* Airline Info */}
           <div className="flex items-center gap-2 min-w-[160px]">
             <img
-              src="/svg/american_airlines_symbol.svg.svg"
+              // src=""
+              src={
+                props.flight.photoUri || "/svg/american_airlines_symbol.svg.svg"
+              }
               alt="symbol"
               className="w-6 h-6"
             />
             <div>
               <h3 className="text-[#1D2433] text-sm md:text-base xl:text-lg font-poppins font-semibold">
-                American Airlines
+                {props.flight.name}
               </h3>
               <div className="flex items-center font-poppins justify-center space-x-1 lg:space-x-2">
                 <span className="font-medium text-sm text-[#676E7E]">
-                  AA-829 .
+                  AA-829
                 </span>
                 <Button className="text-white max-w-fit w-full p-1 text-xs bg-[#0A369D]">
                   First Class

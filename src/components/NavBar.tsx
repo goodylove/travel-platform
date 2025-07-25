@@ -31,19 +31,22 @@ function NavBar() {
     <nav className="bg-white shadow-sm fixed top-0 z-50 w-full right-0 h-20 ">
       <div className="w-full px-3 xl:px-6 py-4 flex justify-between items-center">
         <div className="flex items-center lg:space-x-2 xl:space-x-4">
-          <div>
-            <img
-              src="/svg/navSvg/logo.svg"
-              alt=""
-              className="w-[42px] h-[40px]"
-            />
-          </div>
-          <div className=" max-w-[200px] hidden items-center gap-2 bg-[#F0F2F5]  py-2 px-4 rounded-sm lg:flex ">
-            <img src="/svg/navSvg/search.svg" alt="" className="w-[15px] " />
+          <img
+            src="/svg/navSvg/logo.svg"
+            alt=""
+            className="w-[42px] h-[40px]"
+          />
+
+          <div
+            className="hidden  w-80 items-center gap-2 bg-[#F0F2F5] py-2 px-4 rounded-sm lg:flex 
+             hover:bg-white hover:shadow-md hover:ring-1 hover:ring-[#0D6EFD] 
+             transition-all duration-200 ease-in-out cursor-pointer"
+          >
+            <img src="/svg/navSvg/search.svg" alt="" className="w-[15px]" />
             <input
               type="search"
               placeholder="Search"
-              className="outline-none focus:none font-poppins"
+              className="outline-none font-poppins bg-transparent placeholder-gray-500"
             />
           </div>
         </div>
