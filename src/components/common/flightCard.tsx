@@ -29,7 +29,6 @@ function FlightCard(props: FlightCardProps) {
           {/* Airline Info */}
           <div className="flex items-center gap-2 min-w-[160px]">
             <img
-              // src=""
               src={
                 props.flight.photoUri || "/svg/american_airlines_symbol.svg.svg"
               }
@@ -38,7 +37,7 @@ function FlightCard(props: FlightCardProps) {
             />
             <div>
               <h3 className="text-[#1D2433] text-sm md:text-base xl:text-lg font-poppins font-semibold">
-                {props.flight.name}
+                {props.flight.name || "American Airlines"}
               </h3>
               <div className="flex items-center font-poppins justify-center space-x-1 lg:space-x-2">
                 <span className="font-medium text-sm text-[#676E7E]">

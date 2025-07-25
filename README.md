@@ -1,69 +1,68 @@
-# React + TypeScript + Vite
+# Voya - Travel Itinerary Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Voya is a travel itinerary platform built to help users discover, plan, and organize travel destinations with ease. The platform provides users with up-to-date information on accommodations and popular tourist sites using the Booking API. It is developed with a frontend stack of **React**, **Typescript**, **Tailwind CSS**, and follows a pre-designed **Figma prototype**.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [API Reference](#api-reference)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Features
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Travel Destination Search**: Users can search for accommodations, activities, and attractions based on location.
+- **Detailed Itinerary**: Create and save custom itineraries for multiple destinations.
+- **Booking API Integration**: Access live data for hotels and tourist spots.
+- **Responsive Design**: Built with Tailwind CSS to ensure a seamless experience across all devices.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Technologies Used
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **React**: For building the interactive user interface.
+- **Typescript**: Provides strong typing and enhances developer productivity.
+- **Tailwind CSS**: For fast and responsive styling.
+- **Booking API**: Provides up-to-date information on accommodations and activities.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Installation
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/goodylove/travel-platform.git
+   cd travel-platform
+   ```
+2. Install the dependencies:
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+   ```bash
+
+     npm install
+
+   ```
+
+3. Create a .env file in the root directory and add your RapidAPI key:
+
+   ```env
+   VITE_RAPID_API_KEY=your_rapidapi_key
+
+   ```
+
+4. Start the development server:
+
+   ```bash
+    npm start
+
+
+   ```
+
+## Usage
+
+- **Search for Destinations**: Use the search functionality to find accommodations and attractions in a specific location.
+- **Create an Itinerary**:Add hotels, activities, and attractions to your itinerary.
+- **Save and Access Your Itinerary**:Save itineraries for future reference, stored in the browser's local storage and accessible via your user profile. This allows users to retrieve
+  their itineraries even after closing the browser, as long as local storage is not cleared.
+
+## Api-reference
+
+- **Booking API**: Uses endpoints for searching hotels, popular destinations, and activities. Ensure your RapidAPI key is set in the .env file.

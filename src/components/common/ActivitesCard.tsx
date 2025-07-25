@@ -49,10 +49,11 @@ export function ActivitiesCard({
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
               <div>
                 <p className="text-[#000000] text-xl font-poppins font-semibold">
-                  {selectedActivity?.name}
+                  {selectedActivity?.name || "The Museum of Modern Art"}
                 </p>
                 <p className="text-[#1D2433] text-sm xl:text-sm font-poppins font-medium">
-                  {selectedActivity?.shortDescription}
+                  {selectedActivity?.shortDescription ||
+                    "Works from Van Gogh to Warhol & beyond plus a sculpture garden, 2 cafes & The modern restaurant"}
                 </p>
                 <div className="font-medium flex flex-wrap gap-3 mt-2">
                   <div className="text-[#0D6EFD] flex items-center space-x-1">
@@ -80,7 +81,8 @@ export function ActivitiesCard({
                 <div className="flex items-center space-x-1 min-w-[100px]">
                   <span>&#8358;</span>
                   <span className="xl:text-base text-sm font-semibold font-poppins text-[#1D2433]">
-                    {selectedActivity?.representativePrice?.chargeAmount || 0}
+                    {selectedActivity?.representativePrice?.chargeAmount ||
+                      "123,450.00"}
                   </span>
                 </div>
                 <span className="text-[#1D2433] text-nowrap font-poppins font-normal text-xs">

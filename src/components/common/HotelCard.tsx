@@ -41,10 +41,11 @@ function HotelCard(props: HotelCardProps) {
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
               <div>
                 <p className="text-[#000000] text-xl font-poppins font-semibold">
-                  {props.hotel.name}
+                  {props.hotel?.name || "Riviera Resort, Lekki"}
                 </p>
                 <p className="text-[#1D2433] font-poppins text-sm xl:text-sm font-medium">
-                  {props.hotel.label}
+                  {props.hotel.label ||
+                    "18, Kenneth Agbakuru Street, Off Access Bank Admiralty Way, Lekki Phase1"}
                 </p>
                 <div className="font-medium flex flex-wrap gap-3 mt-2">
                   <div className="text-[#0D6EFD] flex items-center space-x-1">
