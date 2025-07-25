@@ -38,7 +38,7 @@ function NavBar() {
           />
 
           <div
-            className="hidden  w-80 items-center gap-2 bg-[#F0F2F5] py-2 px-4 rounded-sm lg:flex 
+            className="hidden  xl:w-80 items-center gap-2 bg-[#F0F2F5] py-2 px-4 rounded-sm lg:flex 
              hover:bg-white hover:shadow-md hover:ring-1 hover:ring-[#0D6EFD] 
              transition-all duration-200 ease-in-out cursor-pointer"
           >
