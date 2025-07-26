@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <NavBar />
       <div className="flex bg-[#f0f2f5;]   ">
-        <aside className="hidden xl:block fixed top-27 left-5  w-64 xl:w-72   h-[84.5vh]    z-40">
+        <aside className="hidden xl:block fixed top-27 left-5  w-64 xl:w-72   h-[83.5vh]  mb-5  z-40">
           <Sidebar />
         </aside>
 

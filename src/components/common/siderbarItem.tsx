@@ -14,7 +14,7 @@ const SidebarItem: React.FC<SidebarItemProps> = ({ Icon, label }) => (
       className={`icon group-hover:text-[#1D2433] transition-colors text-[#647995]`}
       size={30}
     />
-    <span className="font-medium text-base text-[#647995] group-hover:text-[#1D2433]">
+    <span className="font-semibold text-sm text-[#647995] group-hover:text-[#1D2433]">
       {label}
     </span>
   </div>
